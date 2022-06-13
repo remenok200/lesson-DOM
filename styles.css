@@ -1,0 +1,28 @@
+/* <<== 1
+header > img {
+  display: block;
+  margin: 0 auto;
+}
+
+header > h1 {
+  text-align: center;
+}
+
+footer > h2 {
+  text-align: end;
+} 
+*/
+
+ /* <<== 2 */
+#user-picture {
+  display: block;
+  margin: 0 auto;
+}
+
+#user-caption {
+  text-align: center;
+}
+
+#user-gratitude {
+  text-align: end;
+}
