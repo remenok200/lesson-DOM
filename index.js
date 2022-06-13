@@ -102,3 +102,26 @@ decrementBtn.addEventListener('click', () => {
   counter -= step
   counterState.textContent = `Состояние счетчика: ${counter}`
 })
+
+// Вариант № 2
+let task = ''
+const taskText = document.getElementById('task-text')
+const addTask = document.getElementById('add-task')
+const taskList = document.getElementById('task-list')
+
+taskText.addEventListener('change', changeTaskHandler)
+function changeTaskHandler (e) {
+  task = e.target.value
+}
+
+addTask.addEventListener('click', addTaskHandler)
+function addTaskHandler (e) {
+  e.preventDefault()
+  if (taskText.value !== '') {
+    const item = document.createElement('li')
+    item.textContent = task
+    taskList.append(item)
+    task = ''
+    taskText.value = ''
+  }
+}

@@ -10,7 +10,11 @@
   </head>
   <body>
     <header>
-      <img id="user-picture" src="https://robohash.org/roman?set=set4" alt="roman picture" />
+      <img
+        id="user-picture"
+        src="https://robohash.org/roman?set=set4"
+        alt="roman picture"
+      />
       <h1 id="user-caption">Roman / Bio...</h1>
     </header>
     <main>
@@ -48,9 +52,15 @@
       </p>
       <!-- Вариант № 1 -->
       <p id="counter"></p>
-      <input type="number" value="1" id="counter-value">
+      <input type="number" value="1" id="counter-value" />
       <button id="increment">Инкрементировать счетчик</button>
       <button id="decrement">Декрементировать счетчик</button>
+      <!-- Вариант № 2 -->
+      <form>
+        <input type="text" id="task-text" />
+        <button id="add-task" type="submit">Add tasks to list</button>
+      </form>
+      <ul id="task-list"></ul>
     </main>
     <footer>
       <h2 id="user-gratitude">Thank you for your attention, Roman!</h2>
