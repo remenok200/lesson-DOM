@@ -9,7 +9,6 @@ document.getElementsByName
 console.log(document.querySelector('p'))
 console.log(document.querySelectorAll('p'))
 
-
 // 1
 const userPicture = document.querySelector('#user-picture')
 console.log(userPicture)
@@ -59,7 +58,7 @@ userPicture.addEventListener('click', () => {
 })
 
 /*
-Базовый уровень
+Вариант № 1.
 Реализовать счетчик.
 Состояние (значение) счетчика выводить в абзаце (параграфе).
 2 кнопки, одна декрементирует значение счетчика, вторая инкрементирует.
@@ -69,7 +68,7 @@ userPicture.addEventListener('click', () => {
 Если с input будут проблемы, можно настраивать шаг через prompt.
 
 
-Продвинутый уровень.
+Вариант № 2.
 Реализовать минимальный функционал TODO.
 TODO - приложение для управления задачами.
 Есть input, в который вы вводите текст задачи.
@@ -78,3 +77,28 @@ TODO - приложение для управления задачами.
 Добавлять задачу без текста ("пустую задачу") - запрещено.
 Предусмотреть, чтобы "пустые задачи" не попали в список ul.
 */
+
+// Вариант № 1
+let step = 1
+let counter = 0
+
+const counterState = document.getElementById('counter')
+counterState.textContent = `Состояние счетчика: ${counter}`
+const counterValue = document.querySelector('#counter-value')
+const incrementBtn = document.querySelector('#increment')
+const decrementBtn = document.querySelector('#decrement')
+
+counterValue.addEventListener('change', changeHandler)
+function changeHandler ({ target: { value } }) {
+  step = Number(value)
+  counterState.textContent = `Состояние счетчика: ${counter}`
+}
+
+incrementBtn.addEventListener('click', () => {
+  counter += step
+  counterState.textContent = `Состояние счетчика: ${counter}`
+})
+decrementBtn.addEventListener('click', () => {
+  counter -= step
+  counterState.textContent = `Состояние счетчика: ${counter}`
+})
